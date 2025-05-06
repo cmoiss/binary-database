@@ -1,10 +1,10 @@
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 
 namespace binary_database.service
 {
-    public class RandomHexGenerator
+    internal static class RandomHexGeneratorHelpers
     {
-        public static string GenerateRandomHex(int length)
+        public static int GenerateRandomHex(int length)
         {
             // Cada byte representa 2 caracteres hexadecimais
             byte[] randomBytes = new byte[length / 2];
@@ -24,7 +24,7 @@ namespace binary_database.service
                 hexString = hexString.Substring(0, length);
             }
 
-            return hexString.ToLower();
+            return Convert.ToInt32(hexString.ToLower());
         }
     }
 }

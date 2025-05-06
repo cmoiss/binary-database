@@ -16,14 +16,14 @@ CREATE SCHEMA IF NOT EXISTS `database_odontologia` ;
 USE `database_odontologia` ;
 
 -- -----------------------------------------------------
--- Table `database_odontologia`.`usuario`
+-- Table `database_odontologia`.`usuarios`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `database_odontologia`.`usuario` (
+CREATE TABLE IF NOT EXISTS `database_odontologia`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `digital_code` VARBINARY(255) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `digital_code_UNIQUE` (`digital_code` ASC) VISIBLE)
+  UNIQUE INDEX `digital_code_UNIQUE` (`digital_code` ASC))
 ENGINE = InnoDB;
 
 
